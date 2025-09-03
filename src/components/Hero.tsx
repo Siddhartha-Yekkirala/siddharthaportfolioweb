@@ -106,7 +106,7 @@ const Hero = () => {
               <span className="text-white/60 text-sm font-medium">Follow me</span>
               <div className="flex space-x-4">
                 <a 
-                  href="mailto:siddhartha@example.com" 
+                  href="mailto:siddhartha.00si@gmail.com" 
                   className="group p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover-lift"
                   aria-label="Email"
                 >
