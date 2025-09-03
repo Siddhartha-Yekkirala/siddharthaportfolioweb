@@ -41,7 +41,7 @@ const Contact = () => {
       icon: Github,
       label: "GitHub",
       value: "View my code",
-      href: "https://github.com/siddhartha-yekkirala",
+      href: "https://github.com/Siddhartha-Yekkirala",
       color: "from-gray-600 to-gray-800"
     }
   ];
@@ -245,7 +245,7 @@ const Contact = () => {
                       <Linkedin className="h-5 w-5 text-white" />
                     </a>
                     <a
-                      href="https://github.com/siddhartha-yekkirala"
+                      href="https://github.com/Siddhartha-Yekkirala"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 rounded-full bg-gradient-to-r from-gray-600 to-gray-800 hover:from-gray-700 hover:to-gray-900 transition-colors hover-lift"
