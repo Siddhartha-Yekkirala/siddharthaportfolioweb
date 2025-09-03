@@ -141,7 +141,7 @@ const Hero = () => {
                     <img
                       src={profileImage}
                       alt="Siddhartha Yekkirala - AI/ML Engineer & Web Developer"
-                      className="w-full h-full object-cover rounded-3xl"
+                      className="w-full h-full object-cover rounded-3xl hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 </div>
