@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Download, Github, Linkedin, Mail, Sparkles, Code2, Brain } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import profileImage from '@/assets/siddhartha-profile.jpg';
+import profileImage from '@/assets/siddhartha-profile-new.jpg';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
