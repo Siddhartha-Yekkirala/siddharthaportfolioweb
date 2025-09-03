@@ -253,7 +253,7 @@ const Contact = () => {
                       <Github className="h-5 w-5 text-white" />
                     </a>
                     <a
-                      href="https://twitter.com/siddhartha_y"
+                      href="https://x.com/Mr_Siddhartha_"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 rounded-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 transition-colors hover-lift"
