@@ -34,7 +34,7 @@ const Contact = () => {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Connect with me",
-      href: "https://linkedin.com/in/siddhartha-yekkirala",
+      href: "https://www.linkedin.com/in/siddhartha-yekkirala-b3a667267/",
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -237,7 +237,7 @@ const Contact = () => {
                   </h3>
                   <div className="flex space-x-4">
                     <a
-                      href="https://linkedin.com/in/siddhartha-yekkirala"
+                      href="https://www.linkedin.com/in/siddhartha-yekkirala-b3a667267/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-colors hover-lift"
