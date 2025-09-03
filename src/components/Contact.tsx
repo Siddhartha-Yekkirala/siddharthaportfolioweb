@@ -26,8 +26,8 @@ const Contact = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 98765 43210",
-      href: "tel:+919876543210",
+      value: "+91 63038 81297",
+      href: "tel:+916303881297",
       color: "from-green-500 to-emerald-500"
     },
     {
