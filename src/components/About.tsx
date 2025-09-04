@@ -15,7 +15,7 @@ const About = () => {
     value: "3+",
     icon: BookOpen
   }];
-  return <section id="about" className="py-20 glass-section relative overflow-hidden">
+  return <section id="about" className="py-20 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-primary/10 to-purple-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-64 h-64 bg-gradient-to-tr from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>

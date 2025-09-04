@@ -55,7 +55,7 @@ const Portfolio = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-20 glass-section relative overflow-hidden">
+    <section id="portfolio" className="py-20 bg-muted/30 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-72 h-72 bg-gradient-to-tr from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
@@ -167,10 +167,10 @@ const Portfolio = () => {
 
                   {/* Action Buttons */}
                   <div className="flex gap-3">
-                   <Button
-                     size="sm"
-                     className="flex-1 gradient-button shadow-lg hover:shadow-xl transition-all"
-                   >
+                    <Button
+                      size="sm"
+                      className="flex-1 bg-gradient-to-r from-primary to-purple-500 hover:from-primary-dark hover:to-purple-600 text-white shadow-lg hover:shadow-xl transition-all"
+                    >
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Demo
                     </Button>
@@ -208,11 +208,11 @@ const Portfolio = () => {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                     <Button
-                       size="lg"
-                       className="gradient-button px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all"
-                       onClick={() => window.open('https://github.com/Siddhartha-Yekkirala', '_blank')}
-                     >
+                    <Button
+                      size="lg"
+                      className="bg-gradient-to-r from-primary to-purple-500 hover:from-primary-dark hover:to-purple-600 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all"
+                      onClick={() => window.open('https://github.com/Siddhartha-Yekkirala', '_blank')}
+                    >
                       <Github className="h-5 w-5 mr-2" />
                       Follow on GitHub
                     </Button>
