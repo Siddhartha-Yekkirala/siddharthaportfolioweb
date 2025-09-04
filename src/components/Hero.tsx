@@ -151,19 +151,6 @@ const Hero = () => {
                 <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-white rounded-full animate-pulse"></div>
               </div>
               
-              {/* Enhanced Floating Card */}
-              <div className="absolute -bottom-8 -right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border border-white/20 hover-lift">
-                <div className="flex items-center space-x-3">
-                  <div className="relative">
-                    <div className="w-4 h-4 bg-success rounded-full animate-pulse"></div>
-                    <div className="absolute inset-0 w-4 h-4 bg-success rounded-full animate-ping opacity-75"></div>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-foreground">Available for Work</p>
-                    <p className="text-xs text-muted-foreground">Graduating 2026</p>
-                  </div>
-                </div>
-              </div>
               
               {/* Stats Card */}
               <div className="absolute -top-8 -left-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-white/20 hover-lift hidden lg:block">
