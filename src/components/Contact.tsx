@@ -6,49 +6,43 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
-  const { toast } = useToast();
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "siddhartha.00si@gmail.com",
-      href: "mailto:siddhartha.00si@gmail.com",
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 63038 81297",
-      href: "tel:+916303881297",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      value: "Connect with me",
-      href: "https://www.linkedin.com/in/siddhartha-yekkirala-b3a667267/",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      value: "View my code",
-      href: "https://github.com/Siddhartha-Yekkirala",
-      color: "from-gray-600 to-gray-800"
-    }
-  ];
-
+  const {
+    toast
+  } = useToast();
+  const contactInfo = [{
+    icon: Mail,
+    label: "Email",
+    value: "siddhartha.00si@gmail.com",
+    href: "mailto:siddhartha.00si@gmail.com",
+    color: "from-red-500 to-pink-500"
+  }, {
+    icon: Phone,
+    label: "Phone",
+    value: "+91 63038 81297",
+    href: "tel:+916303881297",
+    color: "from-green-500 to-emerald-500"
+  }, {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "Connect with me",
+    href: "https://www.linkedin.com/in/siddhartha-yekkirala-b3a667267/",
+    color: "from-blue-500 to-cyan-500"
+  }, {
+    icon: Github,
+    label: "GitHub",
+    value: "View my code",
+    href: "https://github.com/Siddhartha-Yekkirala",
+    color: "from-gray-600 to-gray-800"
+  }];
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Simple form validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
@@ -58,7 +52,6 @@ const Contact = () => {
       });
       return;
     }
-
     try {
       // EmailJS configuration
       const serviceId = 'service_2pt2l1d';
@@ -75,14 +68,17 @@ const Contact = () => {
 
       // Send email using EmailJS
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
-
       toast({
         title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+        description: "Thank you for reaching out. I'll get back to you soon."
       });
 
       // Reset form
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
     } catch (error) {
       console.error('EmailJS error:', error);
       toast({
@@ -92,16 +88,13 @@ const Contact = () => {
       });
     }
   };
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
-  return (
-    <section id="contact" className="py-20 bg-background">
+  return <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -129,52 +122,24 @@ const Contact = () => {
                       <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                         Your Name
                       </label>
-                      <Input
-                        id="name"
-                        name="name"
-                        type="text"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Enter your full name"
-                        className="w-full"
-                      />
+                      <Input id="name" name="name" type="text" value={formData.name} onChange={handleInputChange} placeholder="Enter your full name" className="w-full" />
                     </div>
 
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                         Email Address
                       </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="your.email@example.com"
-                        className="w-full"
-                      />
+                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} placeholder="your.email@example.com" className="w-full" />
                     </div>
 
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                         Message
                       </label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        placeholder="Tell me about your project..."
-                        rows={5}
-                        className="w-full"
-                      />
+                      <Textarea id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Tell me about your project..." rows={5} className="w-full" />
                     </div>
 
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full bg-gradient-to-r from-primary to-purple-500 hover:from-primary-dark hover:to-purple-600 text-white"
-                    >
+                    <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary to-purple-500 hover:from-primary-dark hover:to-purple-600 text-white">
                       <Send className="h-5 w-5 mr-2" />
                       Send Message
                     </Button>
@@ -184,7 +149,9 @@ const Contact = () => {
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-8 slide-up" style={{ animationDelay: '0.2s' }}>
+            <div className="space-y-8 slide-up" style={{
+            animationDelay: '0.2s'
+          }}>
               {/* Location Card */}
               <Card className="glass-card hover-lift">
                 <CardContent className="p-6">
@@ -193,27 +160,19 @@ const Contact = () => {
                       <MapPin className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-space font-semibold text-foreground">Location</h3>
-                      <p className="text-muted-foreground">Vishakhapatnam, Andhra Pradesh, India</p>
+                      <h3 className="text-lg font-space font-semibold text-foreground">Address</h3>
+                      <p className="text-muted-foreground">Vutukuru, Andhra Pradesh, India 521401.</p>
                     </div>
                   </div>
-                  <p className="text-muted-foreground text-sm">
-                    Available for remote work and local collaborations
-                  </p>
+                  <p className="text-muted-foreground text-sm">Available for all locations remote work and collaborations</p>
                 </CardContent>
               </Card>
 
               {/* Contact Methods */}
               <div className="grid sm:grid-cols-2 gap-4">
-                {contactInfo.map((contact, index) => (
-                  <Card key={contact.label} className="glass-card hover-lift">
+                {contactInfo.map((contact, index) => <Card key={contact.label} className="glass-card hover-lift">
                     <CardContent className="p-6">
-                      <a
-                        href={contact.href}
-                        target={contact.href.startsWith('http') ? '_blank' : undefined}
-                        rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        className="block"
-                      >
+                      <a href={contact.href} target={contact.href.startsWith('http') ? '_blank' : undefined} rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined} className="block">
                         <div className="flex items-center">
                           <div className={`w-10 h-10 bg-gradient-to-r ${contact.color} rounded-lg flex items-center justify-center mr-3`}>
                             <contact.icon className="h-5 w-5 text-white" />
@@ -225,8 +184,7 @@ const Contact = () => {
                         </div>
                       </a>
                     </CardContent>
-                  </Card>
-                ))}
+                  </Card>)}
               </div>
 
               {/* Social Links */}
@@ -236,28 +194,13 @@ const Contact = () => {
                     Follow My Journey
                   </h3>
                   <div className="flex space-x-4">
-                    <a
-                      href="https://www.linkedin.com/in/siddhartha-yekkirala-b3a667267/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-colors hover-lift"
-                    >
+                    <a href="https://www.linkedin.com/in/siddhartha-yekkirala-b3a667267/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-colors hover-lift">
                       <Linkedin className="h-5 w-5 text-white" />
                     </a>
-                    <a
-                      href="https://github.com/Siddhartha-Yekkirala"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-gradient-to-r from-gray-600 to-gray-800 hover:from-gray-700 hover:to-gray-900 transition-colors hover-lift"
-                    >
+                    <a href="https://github.com/Siddhartha-Yekkirala" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-gradient-to-r from-gray-600 to-gray-800 hover:from-gray-700 hover:to-gray-900 transition-colors hover-lift">
                       <Github className="h-5 w-5 text-white" />
                     </a>
-                    <a
-                      href="https://x.com/Mr_Siddhartha_"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 transition-colors hover-lift"
-                    >
+                    <a href="https://x.com/Mr_Siddhartha_" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 transition-colors hover-lift">
                       <Twitter className="h-5 w-5 text-white" />
                     </a>
                   </div>
@@ -267,8 +210,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
