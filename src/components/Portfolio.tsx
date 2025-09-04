@@ -211,6 +211,7 @@ const Portfolio = () => {
                     <Button
                       size="lg"
                       className="bg-gradient-to-r from-primary to-purple-500 hover:from-primary-dark hover:to-purple-600 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all"
+                      onClick={() => window.open('https://github.com/Siddhartha-Yekkirala', '_blank')}
                     >
                       <Github className="h-5 w-5 mr-2" />
                       Follow on GitHub
