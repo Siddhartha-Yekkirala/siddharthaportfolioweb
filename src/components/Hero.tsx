@@ -57,8 +57,12 @@ const Hero = () => {
                 
                 {/* Specialty Tags */}
                 <div className="flex flex-wrap gap-3">
-                  <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm">Artificial Intelligence and Machine Learning</span>
-                  <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm">Python</span>
+                  <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm">
+                    Machine Learning
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm">
+                    Full Stack
+                  </span>
                   <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm">
                     Data Science
                   </span>
