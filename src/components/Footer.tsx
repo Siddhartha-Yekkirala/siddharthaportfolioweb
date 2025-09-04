@@ -1,16 +1,15 @@
 import React from 'react';
 import { Heart, ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-foreground text-background py-12 relative">
+  return <footer className="bg-foreground text-background py-12 relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/20 to-purple-500/20"></div>
@@ -29,24 +28,18 @@ const Footer = () => {
             </div>
             
             {/* Tagline */}
-            <p className="text-background/80 text-lg mb-6">
-              Building the future, one line of code at a time
-            </p>
+            <p className="text-background/80 text-lg mb-6">Building the future, one line of code at a time</p>
 
             {/* Quick Links */}
             <div className="flex flex-wrap justify-center gap-6 mb-8">
-              {['Home', 'About', 'Skills', 'Services', 'Portfolio', 'Contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => {
-                    const element = document.getElementById(item.toLowerCase());
-                    if (element) element.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="text-background/80 hover:text-background transition-colors duration-200 font-medium"
-                >
+              {['Home', 'About', 'Skills', 'Services', 'Portfolio', 'Contact'].map(item => <button key={item} onClick={() => {
+              const element = document.getElementById(item.toLowerCase());
+              if (element) element.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }} className="text-background/80 hover:text-background transition-colors duration-200 font-medium">
                   {item}
-                </button>
-              ))}
+                </button>)}
             </div>
           </div>
 
@@ -63,12 +56,7 @@ const Footer = () => {
               </div>
 
               {/* Back to Top */}
-              <Button
-                onClick={scrollToTop}
-                variant="outline"
-                size="sm"
-                className="border-background/20 text-background hover:bg-background hover:text-foreground transition-colors"
-              >
+              <Button onClick={scrollToTop} variant="outline" size="sm" className="border-background/20 text-background hover:bg-background hover:text-foreground transition-colors">
                 <ArrowUp className="h-4 w-4 mr-2" />
                 Back to Top
               </Button>
@@ -83,8 +71,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
