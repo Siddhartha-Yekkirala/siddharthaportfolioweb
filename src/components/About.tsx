@@ -1,16 +1,21 @@
 import React from 'react';
 import { GraduationCap, Briefcase, Calendar, Award, Target, BookOpen } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const About = () => {
-  const stats = [
-    { label: "Projects Completed", value: "15+", icon: Target },
-    { label: "ML Model Accuracy", value: "94%", icon: Award },
-    { label: "Years of Learning", value: "3+", icon: BookOpen }
-  ];
-
-  return (
-    <section id="about" className="py-20 bg-background relative overflow-hidden">
+  const stats = [{
+    label: "Projects Completed",
+    value: "15+",
+    icon: Target
+  }, {
+    label: "ML Model Accuracy",
+    value: "94%",
+    icon: Award
+  }, {
+    label: "Years of Learning",
+    value: "3+",
+    icon: BookOpen
+  }];
+  return <section id="about" className="py-20 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-primary/10 to-purple-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-64 h-64 bg-gradient-to-tr from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
@@ -35,8 +40,9 @@ const About = () => {
 
           {/* Stats Row */}
           <div className="grid md:grid-cols-3 gap-6 mb-16">
-            {stats.map((stat, index) => (
-              <Card key={stat.label} className="glass-card hover-lift fade-in text-center" style={{ animationDelay: `${index * 0.1}s` }}>
+            {stats.map((stat, index) => <Card key={stat.label} className="glass-card hover-lift fade-in text-center" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-primary to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <stat.icon className="h-8 w-8 text-white" />
@@ -44,8 +50,7 @@ const About = () => {
                   <div className="text-3xl font-space font-bold text-foreground mb-2">{stat.value}</div>
                   <p className="text-muted-foreground font-medium">{stat.label}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           {/* Bio Section */}
@@ -93,9 +98,7 @@ const About = () => {
                   <div className="space-y-6">
                     <div className="relative pl-6 border-l-4 border-gradient-to-b from-primary to-purple-500">
                       <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
-                      <h4 className="text-xl font-space font-semibold text-foreground mb-2">
-                        B.Tech in Computer Science Engineering
-                      </h4>
+                      <h4 className="text-xl font-space font-semibold text-foreground mb-2">B.Tech in CSE - Artificial Intelligence and Machine Learning</h4>
                       <p className="text-primary font-semibold text-lg mb-2">Vishnu Institute of Technology</p>
                       <div className="flex items-center text-muted-foreground mb-3">
                         <Calendar className="h-4 w-4 mr-2" />
@@ -104,11 +107,9 @@ const About = () => {
                       <div className="bg-muted/50 rounded-lg p-4">
                         <p className="text-foreground font-medium mb-2">Specializations:</p>
                         <div className="flex flex-wrap gap-2">
-                          {["AI/ML", "Data Science", "Software Development", "Cloud Computing"].map((spec) => (
-                            <span key={spec} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                          {["AI/ML", "Data Science", "Software Development", "Cloud Computing"].map(spec => <span key={spec} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
                               {spec}
-                            </span>
-                          ))}
+                            </span>)}
                         </div>
                       </div>
                     </div>
@@ -170,8 +171,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
