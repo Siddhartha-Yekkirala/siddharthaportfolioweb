@@ -2,17 +2,16 @@ import React from 'react';
 import { ArrowRight, Download, Github, Linkedin, Mail, Sparkles, Code2, Brain } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profileImage from '@/assets/siddhartha-profile-new.jpg';
-
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center gradient-bg relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center gradient-bg relative overflow-hidden">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-white/20 to-primary-light/30 rounded-full blur-3xl animate-pulse hidden lg:block"></div>
@@ -83,20 +82,11 @@ const Hero = () => {
 
             {/* Enhanced CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button
-                onClick={() => scrollToSection('portfolio')}
-                size="lg"
-                className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg shadow-2xl hover-lift border-0"
-              >
+              <Button onClick={() => scrollToSection('portfolio')} size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg shadow-2xl hover-lift border-0">
                 View My Work
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button
-                onClick={() => scrollToSection('contact')}
-                variant="outline"
-                size="lg"
-                className="border-2 border-white/30 bg-white/5 backdrop-blur-sm text-white hover:bg-white/10 hover:border-white/50 font-semibold px-8 py-4 text-lg hover-lift"
-              >
+              <Button onClick={() => scrollToSection('contact')} variant="outline" size="lg" className="border-2 border-white/30 bg-white/5 backdrop-blur-sm text-white hover:bg-white/10 hover:border-white/50 font-semibold px-8 py-4 text-lg hover-lift">
                 Get in Touch
               </Button>
             </div>
@@ -105,25 +95,13 @@ const Hero = () => {
             <div className="flex items-center space-x-6 pt-8">
               <span className="text-white/60 text-sm font-medium">Follow me</span>
               <div className="flex space-x-4">
-                <a 
-                  href="mailto:siddhartha.00si@gmail.com" 
-                  className="group p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover-lift"
-                  aria-label="Email"
-                >
+                <a href="mailto:siddhartha.00si@gmail.com" className="group p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover-lift" aria-label="Email">
                   <Mail className="h-5 w-5 text-white group-hover:text-white/90" />
                 </a>
-                <a 
-                  href="https://www.linkedin.com/in/siddhartha-yekkirala-b3a667267/" 
-                  className="group p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover-lift"
-                  aria-label="LinkedIn"
-                >
+                <a href="https://www.linkedin.com/in/siddhartha-yekkirala-b3a667267/" className="group p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover-lift" aria-label="LinkedIn">
                   <Linkedin className="h-5 w-5 text-white group-hover:text-white/90" />
                 </a>
-                <a 
-                  href="https://github.com/siddhartha" 
-                  className="group p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover-lift"
-                  aria-label="GitHub"
-                >
+                <a href="https://github.com/siddhartha" className="group p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover-lift" aria-label="GitHub">
                   <Github className="h-5 w-5 text-white group-hover:text-white/90" />
                 </a>
               </div>
@@ -138,11 +116,7 @@ const Hero = () => {
                 {/* Gradient Ring */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-light via-primary to-primary-dark p-1 animate-pulse">
                   <div className="w-full h-full rounded-3xl overflow-hidden bg-white/5 backdrop-blur-sm">
-                    <img
-                      src={profileImage}
-                      alt="Siddhartha Yekkirala - AI/ML Engineer & Web Developer"
-                      className="w-full h-full object-cover rounded-3xl hover:scale-105 transition-transform duration-500"
-                    />
+                    <img src={profileImage} alt="Siddhartha Yekkirala - AI/ML Engineer & Web Developer" className="w-full h-full object-cover rounded-3xl hover:scale-105 transition-transform duration-500" />
                   </div>
                 </div>
                 
@@ -166,12 +140,7 @@ const Hero = () => {
               </div>
               
               {/* Stats Card */}
-              <div className="absolute -top-8 -left-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-white/20 hover-lift hidden lg:block">
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-primary">90%</p>
-                  <p className="text-xs text-muted-foreground">ML Accuracy</p>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -183,8 +152,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
