@@ -55,7 +55,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-muted/30 relative overflow-hidden">
+    <section id="skills" className="py-20 glass-section relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-72 h-72 bg-gradient-to-tr from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>

@@ -48,7 +48,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-background relative overflow-hidden">
+    <section id="services" className="py-20 glass-section relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-20 right-10 w-80 h-80 bg-gradient-to-br from-primary/10 to-purple-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-72 h-72 bg-gradient-to-tr from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
@@ -117,10 +117,10 @@ const Services = () => {
                   </div>
 
                   {/* CTA */}
-                  <Button
-                    onClick={scrollToContact}
-                    className="w-full bg-gradient-to-r from-primary to-purple-500 hover:from-primary-dark hover:to-purple-600 text-white font-semibold py-3 shadow-lg hover:shadow-xl transition-all group-hover:scale-105"
-                  >
+                   <Button
+                     onClick={scrollToContact}
+                     className="w-full gradient-button font-semibold py-3 shadow-lg hover:shadow-xl transition-all group-hover:scale-105"
+                   >
                     Get Started
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -166,11 +166,11 @@ const Services = () => {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button
-                      onClick={scrollToContact}
-                      size="lg"
-                      className="bg-gradient-to-r from-primary to-purple-500 hover:from-primary-dark hover:to-purple-600 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all"
-                    >
+                     <Button
+                       onClick={scrollToContact}
+                       size="lg"
+                       className="gradient-button px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all"
+                     >
                       Let's Work Together
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>

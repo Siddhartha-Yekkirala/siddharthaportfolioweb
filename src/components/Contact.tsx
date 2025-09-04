@@ -94,7 +94,7 @@ const Contact = () => {
       [e.target.name]: e.target.value
     });
   };
-  return <section id="contact" className="py-20 bg-background">
+  return <section id="contact" className="py-20 glass-section">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -139,7 +139,7 @@ const Contact = () => {
                       <Textarea id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Tell me about your project..." rows={5} className="w-full" />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary to-purple-500 hover:from-primary-dark hover:to-purple-600 text-white">
+                    <Button type="submit" size="lg" className="w-full gradient-button">
                       <Send className="h-5 w-5 mr-2" />
                       Send Message
                     </Button>

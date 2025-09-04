@@ -8,11 +8,11 @@
 
 @layer base {
   :root {
-    /* Base Colors */
+    /* Lovable Gradient Theme - Purple to Pink */
     --background: 245 245 250;
     --foreground: 15 23 42;
 
-    /* Card Colors */
+    /* Card Colors with Glass Effect */
     --card: 255 255 255;
     --card-foreground: 15 23 42;
 
@@ -21,13 +21,13 @@
     --popover-foreground: 15 23 42;
 
     /* Primary Purple Theme */
-    --primary: 250 84% 54%;
+    --primary: 285 85% 65%;
     --primary-foreground: 255 255 255;
-    --primary-light: 253 100% 82%;
-    --primary-dark: 250 84% 44%;
+    --primary-light: 290 100% 80%;
+    --primary-dark: 280 85% 55%;
 
-    /* Secondary Colors */
-    --secondary: 240 11% 96%;
+    /* Secondary Pink Accent */
+    --secondary: 320 65% 88%;
     --secondary-foreground: 15 23 42;
 
     /* Muted Colors */
@@ -35,7 +35,7 @@
     --muted-foreground: 100 7% 55%;
 
     /* Accent Colors */
-    --accent: 204 100% 97%;
+    --accent: 285 85% 95%;
     --accent-foreground: 15 23 42;
 
     /* Utility Colors */
@@ -45,25 +45,29 @@
     --success-foreground: 255 255 255;
 
     /* Border & Input */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
+    --border: 285 20% 85%;
+    --input: 285 20% 85%;
 
-    --ring: 250 84% 54%;
+    --ring: 285 85% 65%;
     --radius: 1rem;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(250 84% 54%) 0%, hsl(253 100% 82%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(250 84% 54%) 0%, hsl(265 89% 78%) 50%, hsl(280 100% 85%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(255 255 255 / 0.8) 0%, hsl(255 255 255 / 0.4) 100%);
+    /* Lovable Gradient System */
+    --gradient-primary: linear-gradient(135deg, hsl(285 85% 65%) 0%, hsl(320 70% 70%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(280 85% 60%) 0%, hsl(300 80% 70%) 50%, hsl(320 75% 80%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(285 85% 98%) 0%, hsl(320 70% 96%) 100%);
+    --gradient-glass: linear-gradient(145deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.05) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(285 85% 65%) 0%, hsl(310 75% 70%) 100%);
+    --gradient-button-hover: linear-gradient(135deg, hsl(280 85% 60%) 0%, hsl(305 75% 65%) 100%);
 
-    /* Shadows */
-    --shadow-soft: 0 4px 20px hsl(250 84% 54% / 0.1);
-    --shadow-medium: 0 8px 40px hsl(250 84% 54% / 0.15);
-    --shadow-strong: 0 20px 60px hsl(250 84% 54% / 0.2);
+    /* Glassmorphism Shadows */
+    --shadow-glass: 0 8px 32px rgba(120, 90, 200, 0.15);
+    --shadow-glass-hover: 0 16px 48px rgba(120, 90, 200, 0.25);
+    --shadow-glow: 0 0 40px rgba(285, 85%, 65%, 0.3);
 
-    /* Animations */
+    /* Enhanced Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-glass: backdrop-filter 0.3s ease;
 
     --sidebar-background: 0 0% 98%;
 
@@ -127,8 +131,10 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply text-foreground font-inter;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, hsl(285 85% 98%) 0%, hsl(320 70% 96%) 50%, hsl(280 85% 97%) 100%);
+    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -142,8 +148,21 @@
   }
 
   .glass-card {
-    @apply backdrop-blur-sm bg-white/80 border border-white/20;
-    box-shadow: var(--shadow-soft);
+    background: var(--gradient-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-glass);
+    transition: var(--transition-glass);
+  }
+
+  .glass-section {
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.1) 0%, 
+      rgba(255, 255, 255, 0.05) 50%, 
+      rgba(255, 255, 255, 0.1) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
 
   .hover-lift {
@@ -151,12 +170,16 @@
   }
 
   .hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-medium);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-glass-hover);
   }
 
   .gradient-bg {
     background: var(--gradient-hero);
+  }
+
+  .section-bg {
+    background: var(--gradient-section);
   }
 
   .fade-in {
@@ -173,6 +196,19 @@
 
   .animate-float-delayed {
     animation: float 6s ease-in-out infinite 2s;
+  }
+
+  .gradient-button {
+    background: var(--gradient-button);
+    border: none;
+    color: white;
+    transition: var(--transition-smooth);
+  }
+
+  .gradient-button:hover {
+    background: var(--gradient-button-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glass);
   }
 }
 

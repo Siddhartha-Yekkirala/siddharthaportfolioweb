@@ -77,11 +77,11 @@ const Hero = () => {
 
             {/* Enhanced CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button onClick={() => scrollToSection('portfolio')} size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg shadow-2xl hover-lift border-0">
+              <Button onClick={() => scrollToSection('portfolio')} size="lg" className="gradient-button font-semibold px-8 py-4 text-lg shadow-2xl hover-lift border-0">
                 View My Work
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button onClick={() => scrollToSection('contact')} variant="outline" size="lg" className="border-2 border-white/30 bg-white/5 backdrop-blur-sm text-white hover:bg-white/10 hover:border-white/50 font-semibold px-8 py-4 text-lg hover-lift">
+              <Button onClick={() => scrollToSection('contact')} variant="glass" size="lg" className="font-semibold px-8 py-4 text-lg hover-lift">
                 Get in Touch
               </Button>
             </div>
