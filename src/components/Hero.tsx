@@ -19,11 +19,6 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-xl animate-pulse delay-1000 hidden lg:block"></div>
         
         {/* Floating Icons */}
-        <div className="absolute top-32 left-20 animate-float hidden lg:block">
-          <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
-            <Code2 className="h-6 w-6 text-white/80" />
-          </div>
-        </div>
         <div className="absolute bottom-40 right-32 animate-float-delayed hidden lg:block">
           <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
             <Brain className="h-6 w-6 text-white/80" />
