@@ -43,9 +43,9 @@ const Hero = () => {
                 </p>
                 <h1 className="text-5xl md:text-7xl font-space font-bold leading-tight">
                   <span className="text-white">Siddhartha</span>
-                  <span className="block bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-100 bg-clip-text text-transparent animate-pulse">
-                    Yekkirala
-                  </span>
+                <span className="block bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 bg-clip-text text-transparent animate-pulse">
+                  Yekkirala
+                </span>
                 </h1>
               </div>
               
@@ -116,7 +116,7 @@ const Hero = () => {
                 </div>
                 
                 {/* Decorative Elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-300 rounded-full animate-bounce"></div>
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-gray-300 rounded-full animate-bounce"></div>
                 <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-white rounded-full animate-pulse"></div>
               </div>
               
